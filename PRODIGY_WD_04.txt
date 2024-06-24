@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: powderblue;
+            color: mediumseagreen;
+            padding: 1rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+        }
+
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+
+        header nav ul li {
+            margin: 0 1rem;
+        }
+
+        header nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        section {
+            padding: 5rem 2rem;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        #home {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            background: #f0f0f0;
+            padding-top: 6rem;
+        }
+
+        .profile-photo {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            margin-bottom: 1rem;
+        }
+
+        h1 {
+            margin-bottom: 0.5rem;
+        }
+
+        #about ul {
+            list-style: disc;
+            padding-left: 20px;
+        }
+
+        .project {
+            margin-bottom: 2rem;
+        }
+
+        .project a {
+            display: inline-block;
+            margin-top: 0.5rem;
+            color: #0073e6;
+            text-decoration: none;
+        }
+
+        footer {
+            background-color: tomato;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home">
+        <div class="intro">
+            <img src="C:\Users\Nehah\OneDrive\Desktop\formal pic.jpeg" alt="Your Photo" class="profile-photo">
+            <h1>Hello, I'm Neha Hareesh</h1>
+            <p>I'm a web developer specializing in creating beautiful and functional websites.</p>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Hello! My name is Neha Hareesh and I am a passionate web developer with experience in creating dynamic and responsive websites. I hold a degree in Bsc Computer Science,Mathematics  from Christ University and have 1 year of professional experience working in the web development industry.</p>
+        <p>My skills include:</p>
+        <ul>
+            <li>HTML, CSS, JavaScript</li>
+            <li>React, Angular, Vue</li>
+            <li>Node.js, Express</li>
+            <li>SQL, MongoDB</li>
+            <li>Git, GitHub</li>
+        </ul>
+    </section>
+
+    <section id="projects">
+        <h2>Projects</h2>
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of project 1. This project involved...</p>
+            <a href="https://github.com/NehaHareesh/PRODIGY_WD_01" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of project 2. This project involved...</p>
+            <a href="https://github.com/NehaHareesh/PRODIGY_WD_02/blob/main/PRODIGY_WD_02.html" target="_blank">View on GitHub</a>
+        </div>
+        <!-- Add more projects as needed -->
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <p>If you'd like to get in touch, please email me at <a href="mailto:nehahareesh@gmail.com">nehahareesh@gmail.com</a> or connect with me on <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 [Your Name]. All rights reserved.</p>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
